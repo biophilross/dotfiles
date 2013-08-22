@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-This it the repository for my personal dotfiles. Just follow the instructions to set up your dotfiles on any unix-based machine
+This it the repository for my personal dotfiles. Just follow the instructions to set up your dotfiles on a *nix system.
 
 ## Installation Steps
 

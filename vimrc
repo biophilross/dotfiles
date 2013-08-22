@@ -99,13 +99,13 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
 
-" map tab keys
+" Map tab keys
 nnoremap <silent> <C-Right> :tabnext<CR>
 nnoremap <silent> <C-Left> :tabprevious<CR>
 nnoremap <silent> <C-c> :tabclose<CR>
 nnoremap <silent> <C-t> :tabnew<CR>
 
-" map the function keys to switch tabs
+" Map the function keys to switch tabs
 nnoremap <F2> 1gt
 nnoremap <F3> 2gt
 nnoremap <F4> 3gt
@@ -118,6 +118,6 @@ nnoremap <F10> 9gt
 nnoremap <F11> 10gt
 nnoremap <F12> 11gt
 
-" center on searchs
+" Center on searches
 map N Nzz
 map n nzzilent> 

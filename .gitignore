@@ -1,3 +1,5 @@
 .DS_Store
 *.un~
 *.DS_Store
+vim/tmp/
+vim/backup/

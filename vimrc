@@ -35,6 +35,9 @@ endif
 
 "" General Settings
 syntax enable                 " enable syntax highlighting
+set autochdir                 " always switch to current directory
+set backupdir=~/.vim/backup   " set up backup directory
+set directory=~/.vim/tmp      " temporary storage directory
 set background=dark           " assume a dark background
 set history=500               " sore a lot of history
 set hidden                    " allow buffer switching without saving
@@ -95,3 +98,26 @@ nmap <leader>q :nohlsearch<CR>
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
 map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+
+" map tab keys
+nnoremap <silent> <C-Right> :tabnext<CR>
+nnoremap <silent> <C-Left> :tabprevious<CR>
+nnoremap <silent> <C-c> :tabclose<CR>
+nnoremap <silent> <C-t> :tabnew<CR>
+
+" map the function keys to switch tabs
+nnoremap <F2> 1gt
+nnoremap <F3> 2gt
+nnoremap <F4> 3gt
+nnoremap <F5> 4gt
+nnoremap <F6> 5gt
+nnoremap <F7> 6gt
+nnoremap <F8> 7gt
+nnoremap <F9> 8gt
+nnoremap <F10> 9gt
+nnoremap <F11> 10gt
+nnoremap <F12> 11gt
+
+" center on searchs
+map N Nzz
+map n nzzilent> 

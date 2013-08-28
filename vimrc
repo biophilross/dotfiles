@@ -19,6 +19,9 @@ Bundle 'tpope/vim-commentary'
 Bundle 'godlygeek/tabular'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'groenewege/vim-less'
+Bundle "mattn/emmet-vim"
 
 Bundle 'Lokaltog/vim-powerline'
 let g:Powerline_symbols = 'compatible'
@@ -120,4 +123,13 @@ nnoremap <F12> 11gt
 
 " Center on searches
 map N Nzz
-map n nzzilent> 
+map n nzz 
+
+" Custom functions
+function LessToCss()
+  let current_file = shellescape(expand('%:p'))
+  let filename = shellescape(expand('%:r'))
+  let command = "silent !lessc " . currentl_file . " " . filename . ".css"
+  execute command
+endfunction
+autocmd BufWritePost,FileWritePost *.less call LessToCss()

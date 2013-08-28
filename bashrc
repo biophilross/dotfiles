@@ -23,10 +23,11 @@ alias bashrc='vim ~/.bashrc'
 
 # File navigation shortcuts
 alias b='cd -'
+alias h='cd ~'
+alias sys='cd /'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias sys='cd /'
-alias h='cd ~'
+alias desk='cd ~/Desktop'
 alias drop='cd ~/Dropbox'
 alias down='cd ~/Downloads'
 

@@ -22,10 +22,13 @@ alias bashprof='vim ~/.bash_profile'
 alias bashrc='vim ~/.bashrc'
 
 # File navigation shortcuts
+alias b='cd -'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias system='cd /'
-alias home='cd ~'
+alias sys='cd /'
+alias h='cd ~'
+alias drop='cd ~/Dropbox'
+alias down='cd ~/Downloads'
 
 # Commands run when I open a new terminal session
 date

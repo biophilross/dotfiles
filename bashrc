@@ -24,12 +24,15 @@ alias bashrc='vim ~/.bashrc'
 # File navigation shortcuts
 alias b='cd -'
 alias h='cd ~'
-alias sys='cd /'
+alias s='cd /'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias desk='cd ~/Desktop'
 alias drop='cd ~/Dropbox'
 alias down='cd ~/Downloads'
+
+# Opening pdfs with Skim
+alias skim='open -a Skim.app'
 
 # Commands run when I open a new terminal session
 date

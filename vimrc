@@ -55,6 +55,7 @@ set showmatch                 " show matching brackets/parentheses
 set autoindent                " indent at the same level of the previous line
 if has ('persistent_undo')    
   set undofile                " maximum number of changes that can be undone
+  set undodir=~/.vim/un       " set undo file directory
   set undolevels=1000         " mximum number of lines to save for undo on
   set undoreload=10000        " a buffer reload
 endif                 

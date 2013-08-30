@@ -34,6 +34,12 @@ alias down='cd ~/Downloads'
 # Opening pdfs with Skim
 alias skim='open -a Skim.app'
 
+# Using julia
+alias julia='~/Dropbox/julia/julia'
+
+# tmux stuff
+alias tmux="TERM=screen-256color-bce tmux"
+
 # Commands run when I open a new terminal session
 date
 echo 'Welcome, Phil!'

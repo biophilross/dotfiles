@@ -11,6 +11,11 @@ export GREP_OPTIONS='--color=auto'
 ## Aliases
 alias vim='mvim -v'
 
+# Meh
+alias sudo='/usr/bin/sudo'
+alias su='/usr/bin/su'
+alias top='/usr/bin/top'
+
 #interactive file commands
 alias rm='rm -i'
 alias cp='cp -i'
@@ -35,9 +40,6 @@ alias down='cd ~/Downloads'
 
 # Opening pdfs with Skim
 alias skim='open -a Skim.app'
-
-# Using julia
-alias julia='~/Dropbox/julia/julia'
 
 # tmux stuff
 alias tmux="TERM=screen-256color-bce tmux"

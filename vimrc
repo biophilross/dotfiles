@@ -21,7 +21,9 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'groenewege/vim-less'
-Bundle "mattn/emmet-vim"
+Bundle 'mattn/emmet-vim'
+Bundle 'tpope/vim-markdown' 
+Bundle 'suan/vim-instant-markdown'
 
 Bundle 'Lokaltog/vim-powerline'
 let g:Powerline_symbols = 'compatible'

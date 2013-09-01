@@ -20,6 +20,8 @@ alias ll='ls -l'
 # Profile editing shortcuts
 alias bashprof='vim ~/.bash_profile'
 alias bashrc='vim ~/.bashrc'
+alias vimrc='vim ~/.vimrc'
+alias tmuxconf='vim ~/.tmux.conf'
 
 # File navigation shortcuts
 alias b='cd -'

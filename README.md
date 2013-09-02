@@ -1,6 +1,8 @@
 dotfiles
 ========
 
+## This needs to be changed... will get to that soonish.
+
 This it the repository for my personal dotfiles. Just follow the instructions to set up your dotfiles on a *nix system.
 
 ## Installation Steps

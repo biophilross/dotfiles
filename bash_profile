@@ -29,3 +29,4 @@ PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -
 PATH+=$HOME/.rvm/bin
 
 export PATH
+export LC_ALL=en_US.UTF-8

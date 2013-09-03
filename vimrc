@@ -28,7 +28,8 @@ Bundle 'suan/vim-instant-markdown'
 Bundle 'Lokaltog/vim-powerline'
 let g:Powerline_symbols = 'compatible'
 set statusline+=%{fugitive#statusline()}
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 9
+set guifont=Inconsolata\ for\ Powerline
+set ambiwidth=single
 set laststatus=2
 
 " Color settings

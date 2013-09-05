@@ -5,8 +5,6 @@ test -f ~/.bashrc && source ~/.bashrc
 
 # Set architecture flags
 export ARCHFLAGS="-arch x86_64"
-# Ensure user-installed binaries take precedence
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
@@ -20,13 +18,11 @@ source /usr/local/bin/virtualenvwrapper.sh
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
 
-PS1="\[\033[1;32m\]\h\[\033[m\] \[\033[1;35m\]\w\[\033[m\] % "  # set prompt
-PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
+# set prompt
+PS1="\[\033[1;32m\]\h\[\033[m\] \[\033[1;35m\]\w\[\033[m\] % "  
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Load RVM into a shell session as a function
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-# Add RVM to path for scripting
-PATH+=$HOME/.rvm/bin
-
-export PATH
-export LC_ALL=en_US.UTF-8
+# Ensure user-installed binaries take precedence
+export PATH=$HOME/.rvm/gems/ruby-2.0.0-p247:$HOME/.rvm/gems/ruby-2.0.0-p247@global:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin

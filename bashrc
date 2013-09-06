@@ -9,14 +9,18 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export GREP_OPTIONS='--color=auto'
 
 ## Aliases
+
+# Vim
 alias vim='mvim -v'
 
 # Meh
 alias sudo='/usr/bin/sudo'
 alias su='/usr/bin/su'
 alias top='/usr/bin/top'
+alias ssh='/usr/bin/ssh'
+alias openssl='/usr/bin/openssl'
 
-#interactive file commands
+# Interactive file commands
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -37,6 +41,10 @@ alias ...='cd ../..'
 alias desk='cd ~/Desktop'
 alias drop='cd ~/Dropbox'
 alias down='cd ~/Downloads'
+
+# Todo list editing
+alias t='~/Dropbox/todo/todo.sh'
+alias todo='vim ~/Dropbox/todo/todo.txt'
 
 # Opening pdfs with Skim
 alias skim='open -a Skim.app'

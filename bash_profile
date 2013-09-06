@@ -11,7 +11,7 @@ export PIP_REQUIRE_VIRTUALENV=true
 # cache pip-installed packages to avoid re-downloading
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
-# Where to look for the module                                                                                                                                                 
+# Where to look for the module 
 VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python   
 # Telles virtualenvwrapper where to store the virtualenvs
 export WORKON_HOME=$HOME/.virtualenvs
@@ -23,7 +23,7 @@ export PIP_RESPECT_VIRTUALENV=true
 # set prompt
 PS1="\[\033[1;32m\]\h\[\033[m\] \[\033[1;35m\]\w\[\033[m\] % "
 
-# Ensure user-installed binaries take precedence                                                                                                                               
+# Ensure user-installed binaries take precedence   
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin   
 
 # Load RVM into a shell session as a function

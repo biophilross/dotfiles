@@ -24,7 +24,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'mattn/emmet-vim'
 Bundle 'tpope/vim-markdown' 
 Bundle 'suan/vim-instant-markdown'
-Bundle 'mivok/vimtodo'
+Bundle 'jaywilliams/vim-todo'
 
 Bundle 'Lokaltog/vim-powerline'
 let g:Powerline_symbols = 'compatible'

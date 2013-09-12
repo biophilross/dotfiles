@@ -63,6 +63,8 @@ if has ('persistent_undo')
   set undolevels=1000         " mximum number of lines to save for undo on
   set undoreload=10000        " a buffer reload
 endif                 
+set foldmethod=indent         " fold based on indent
+set nofoldenable              " don't fold by default
 
 "" Whitespace
 set wrap                      " wrap lines
@@ -138,3 +140,6 @@ function LessToCss()
   execute command
 endfunction
 autocmd BufWritePost,FileWritePost *.less call LessToCss()
+" Save folds
+autocmd BufWinLeave * mkview
+autocmd BufWinEnter * silent loadview

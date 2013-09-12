@@ -21,7 +21,9 @@ alias sudo='/usr/bin/sudo'
 alias su='/usr/bin/su'
 alias top='/usr/bin/top'
 alias ssh='/usr/bin/ssh'
-alias openssl='/usr/bin/openssl'
+
+# Commands the way I want them
+alias ll='ls -l'
 
 # Interactive file commands
 alias rm='rm -i'

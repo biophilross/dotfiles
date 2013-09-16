@@ -48,6 +48,7 @@ alias drop='cd ~/Dropbox'
 alias down='cd ~/Downloads'
 
 # Todo list editing
+alias todo='vim ~/Dropbox/todo/TODO'
 
 # Opening pdfs with Skim
 alias skim='open -a Skim.app'

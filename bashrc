@@ -24,6 +24,7 @@ alias ssh='/usr/bin/ssh'
 
 # Commands the way I want them
 alias ll='ls -l'
+alias less='less -N'
 
 # Interactive file commands
 alias rm='rm -i'

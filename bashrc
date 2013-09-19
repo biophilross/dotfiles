@@ -14,7 +14,7 @@ export GREP_OPTIONS='--color=auto'
 alias vim='mvim -v'
 
 # iMac ssh
-alias lab='ssh -X philross@10.102.54.11'
+alias lab='ssh philross@10.102.54.11'
 
 # Meh
 alias sudo='/usr/bin/sudo'

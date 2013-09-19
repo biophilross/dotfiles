@@ -21,7 +21,7 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export PIP_RESPECT_VIRTUALENV=true
 
 # set prompt
-PS1="\[\033[1;32m\]\h\[\033[m\] \[\033[1;35m\]\w\[\033[m\] % "
+export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ '
 
 # Ensure user-installed binaries take precedence   
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin   

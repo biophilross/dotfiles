@@ -65,3 +65,5 @@ echo 'Welcome, Phil!'
 syspip(){
      PIP_REQUIRE_VIRTUALENV="" pip "$@"
 }
+
+calc () { python -c "from math import *; print $1"; }

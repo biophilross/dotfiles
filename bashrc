@@ -26,6 +26,7 @@ alias ssh='/usr/bin/ssh'
 alias ll='ls -l'
 alias less='less -N'
 alias awk="awk -F '\t' -v OFS='\t'"
+alias bioawk="bioawk -F '\t' -v OFS='\t'"
 
 # Interactive file commands
 alias rm='rm -i'

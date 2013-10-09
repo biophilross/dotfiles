@@ -13,8 +13,10 @@ export GREP_OPTIONS='--color=auto'
 # Vim
 alias vim='mvim -v'
 
-# iMac ssh
+# remote access
 alias lab='ssh philross@10.102.54.11'
+alias biostar='ssh pzr3@biostar.psu.edu'
+alias hammer='ssh pzr3@hammer.rcc.psu.edu'
 
 # Meh
 alias sudo='/usr/bin/sudo'
@@ -23,7 +25,7 @@ alias top='/usr/bin/top'
 alias ssh='/usr/bin/ssh'
 
 # Commands the way I want them
-alias ll='ls -l'
+alias ll='ls -lah'
 alias less='less -N'
 alias awk="awk -F '\t' -v OFS='\t'"
 alias bioawk="bioawk -F '\t' -v OFS='\t'"

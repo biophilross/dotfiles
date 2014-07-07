@@ -1,5 +1,5 @@
 " Color settings
-colorscheme default
+colorscheme pablo
 " Set vim to recognize 256 colors
 if $TERM == "xtrm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnomre-terminal"
   set t_co=256

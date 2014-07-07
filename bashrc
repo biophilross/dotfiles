@@ -9,7 +9,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 #export GREP_OPTIONS='--color=always'
 
 # set prompt
-export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ '
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\n\$ '
 
 ## Aliases
 

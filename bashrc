@@ -1,40 +1,36 @@
-# This is the personal $HOME ~/.bashrc file for Phil Ross
+# This is the personal $HOME/.bashrc file for Phil Ross
 
 # Load .bashrc if it exists
 test -f etc/bashrc && source etc/bashrc  
  
 # Terminal Prompt Customization
 export CLICOLOR=1
-export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
-export GREP_OPTIONS='--color=auto'
+export LSCOLORS=ExFxBxDxCxegedabagacad
+#export GREP_OPTIONS='--color=always'
+
+# set prompt
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\n\$ '
 
 ## Aliases
 
-# Vim
-alias vim='mvim -v'
-
 # remote access
 alias lab='ssh philross@10.102.54.11'
-alias biostar='ssh pzr3@biostar.psu.edu'
-alias hammer='ssh pzr3@hammer.rcc.psu.edu'
+alias biostar='ssh -X pzr3@biostar.psu.edu'
+alias lionxv='ssh -X pzr3@lionxv.rcc.psu.edu'
+alias hammer='ssh -X pzr3@hammer.rcc.psu.edu'
 
-# Meh
-alias sudo='/usr/bin/sudo'
-alias su='/usr/bin/su'
-alias top='/usr/bin/top'
-alias ssh='/usr/bin/ssh'
+# open sftp connection
+alias getfiles='sftp pzr3@biostar.psu.edu'
 
 # Commands the way I want them
-alias ll='ls -lah'
-alias less='less -N'
+alias ll='ls -lh'
 alias awk="awk -F '\t' -v OFS='\t'"
-alias bioawk="bioawk -F '\t' -v OFS='\t'"
+# alias bioawk="bioawk -F '\t' -v OFS='\t'"
 
 # Interactive file commands
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias ll='ls -l'
 
 # Profile editing shortcuts
 alias bashprof='vim ~/.bash_profile'
@@ -48,15 +44,6 @@ alias h='cd ~'
 alias s='cd /'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias desk='cd ~/Desktop'
-alias drop='cd ~/Dropbox'
-alias down='cd ~/Downloads'
-
-# Todo list editing
-alias todo='vim ~/Dropbox/todo/TODO'
-
-# Opening pdfs with Skim
-alias skim='open -a Skim.app'
 
 # tmux stuff
 alias tmux="TERM=screen-256color-bce tmux"
@@ -65,9 +52,9 @@ alias tmux="TERM=screen-256color-bce tmux"
 date
 echo 'Welcome, Phil!'
 
-# Helpfule Functions
-syspip(){
-     PIP_REQUIRE_VIRTUALENV="" pip "$@"
-}
+# # Helpful Functions
+# syspip(){
+#      PIP_REQUIRE_VIRTUALENV="" pip "$@"
+# }
 
 calc () { python -c "from math import *; print $1"; }

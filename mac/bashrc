@@ -1,0 +1,86 @@
+# This is the personal $HOME/.bashrc file for Phil Ross
+
+# Load .bashrc if it exists
+test -f etc/bashrc && source etc/bashrc  
+ 
+# Terminal Prompt Customization
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+#export GREP_OPTIONS='--color=always'
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;31m\]\w\[\033[00m\]\n\$ '
+
+## Aliases
+
+# Vim
+#alias vim='mvim -v'
+
+# open ssh connection
+alias lab='ssh -Y philross@10.102.54.11'
+alias biostar='ssh -Y pzr3@biostar.psu.edu'
+alias lionxv='ssh -Y pzr3@lionxv.rcc.psu.edu'
+alias lionxf='ssh -Y pzr3@lionxf.rcc.psu.edu'
+alias lionxg='ssh -Y pzr3@lionxg.rcc.psu.edu'
+alias lionxh='ssh -Y pzr3@lionxh.rcc.psu.edu'
+alias lionxi='ssh -Y pzr3@lionxi.rcc.psu.edu'
+alias lionxj='ssh -Y pzr3@lionxj.rcc.psu.edu'
+alias hammer='ssh -Y pzr3@hammer.rcc.psu.edu'
+
+# open sftp connection
+alias getfiles='sftp pzr3@biostar.psu.edu'
+
+# Meh
+#alias sudo='/usr/bin/sudo'
+#alias su='/usr/bin/su'
+#alias top='/usr/bin/top'
+#alias ssh='/usr/bin/ssh'
+#alias sftp='/usr/bin/sftp'
+
+# Commands the way I want them
+alias ll='ls -lh'
+alias awk="awk -F '\t' -v OFS='\t'"
+alias bioawk="bioawk -F '\t' -v OFS='\t'"
+
+# Interactive file commands
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Profile editing shortcuts
+alias bashprof='vim ~/.bash_profile'
+alias bashrc='vim ~/.bashrc'
+alias vimrc='vim ~/.vimrc'
+alias tmuxconf='vim ~/.tmux.conf'
+
+# File navigation shortcuts
+alias b='cd -'
+alias h='cd ~'
+alias s='cd /'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias bin='cd ~/bin'
+alias src='cd ~/src'
+alias inno='cd /Volumes/Inno'
+alias desk='cd ~/Desktop'
+alias drop='cd ~/Dropbox'
+alias down='cd ~/Downloads'
+alias docs='cd ~/Documents'
+alias projects='cd ~/Dropbox/projects'
+alias mynotes='cd ~/Dropbox/notes/mkd'
+alias worknotes='cd ~/Box/lab_work/notes'
+
+# Opening pdfs with Skim
+alias skim='open -a Skim.app'
+
+# tmux stuff
+alias tmux="TERM=screen-256color-bce tmux"
+
+# Commands run when I open a new terminal session
+date
+echo 'Welcome, Phil!'
+
+# Helpfule Functions
+syspip(){
+     PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+
+calc () { python -c "from math import *; print $1"; }

@@ -6,9 +6,9 @@
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
-files="tmux.conf bashrc bash_profile vimrc vim"    # list of files/folders to symlink in homedir
+dir="$HOME/dotfiles"                    # dotfiles directory
+olddir="$HOME/dotfiles_old"             # old dotfiles backup directory
+files="tmux.conf bashrc bash_profile vimrc"    # list of files/folders to symlink in homedir
 
 ##########
 

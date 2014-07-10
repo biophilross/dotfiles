@@ -29,3 +29,15 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+# Setup vim
+mkdir "$HOME/.vim"
+mkdir "$HOME/.vim/un"
+mkdir "$HOME/.vim/backup"
+mkdir "$HOME/.vim/tmp"
+
+# colors
+git clone https://github.com/endel/vim-github-colorscheme "$HOME/.vim/github-colors"
+ln -s "$HOME/.vim/github-colors/github.vim" "$HOME/.vim/colors/"
+
+exit

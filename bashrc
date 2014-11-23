@@ -49,8 +49,6 @@ alias date='date +%F'
 # tmux stuff
 alias tmux="TERM=screen-256color-bce tmux"
 
-alias clang='clang -stdlib=libstdc++'
-
 # Commands run when I open a new terminal session
 date
 echo 'Welcome, Phil!'
@@ -61,3 +59,30 @@ echo 'Welcome, Phil!'
  }
 
 calc () { python -c "from math import *; print $1"; }
+
+# Change the TERM environment variable (to get 256 colors) and make Vim
+# connecting to X Server even if running in a terminal emulator (to get
+# dynamic update of syntax highlight and Object Browser):
+#if [ "x$DISPLAY" != "x" ]
+#then
+#  if [ "screen" = "$TERM" ]
+#  then
+#    export TERM=screen-256color
+#  else
+#    export TERM=xterm-256color
+#  fi
+#  alias vim='vim --servername VIM'
+#  if [ "x$TERM" == "xxterm" ] || [ "x$TERM" == "xxterm-256color" ]
+#  then
+#    function tvim(){ tmux -2 new-session "TERM=screen-256color vim --servername VIM $@" ; }
+#  else
+#    function tvim(){ tmux new-session "vim --servername VIM $@" ; }
+#  fi
+#else
+#  if [ "x$TERM" == "xxterm" ] || [ "x$TERM" == "xxterm-256color" ]
+#  then
+#    function tvim(){ tmux -2 new-session "TERM=screen-256color vim $@" ; }
+#  else
+#    function tvim(){ tmux new-session "vim $@" ; }
+#  fi
+#fi

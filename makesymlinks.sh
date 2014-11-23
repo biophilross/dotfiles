@@ -30,4 +30,8 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+mkdir "$HOME/.vim/un"
+mkdir "$HOME/.vim/tmp"
+mkdir "$HOME/.vim/backup"
+
 exit

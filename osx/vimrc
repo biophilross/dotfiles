@@ -1,6 +1,6 @@
 set nocompatible
 " Color settings
-colorscheme pablo
+colorscheme elflord
 " Set vim to recognize 256 colors
 if $TERM == "xtrm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnomre-terminal"
   set t_co=256
@@ -18,7 +18,7 @@ set hidden                    " allow buffer switching without savinset nocompat
 set mousehide                 " automatically hide mouse cursor while typing
 set encoding=utf-8            " character encoding
 set showcmd                   " display incomplete commands
-set number                    " line numbers on
+" set number                    " line numbers on
 set showmode                  " display current mode
 set cursorline                " highlight current line
 highlight clear SignColumn    " Sign Column should match the background of things

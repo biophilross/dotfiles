@@ -1,33 +1,101 @@
-if(interactive()){
-       # Get startup messages of three packages and set Vim as R pager:
-              options(setwidth.verbose = 1,
-                     colorout.verbose = 1,
-                    vimcom.verbose = 1,
-                   pager = "vimrpager")
-          # Use the text based web browser w3m to navigate through R docs:
-         if(Sys.getenv("TMUX") != "")
-            options(browser="~/bin/vimrw3mbrowser",
-                       help_type = "html")
-              # Use either Vim or GVim as text editor for R:
-             if(nchar(Sys.getenv("DISPLAY")) > 1)
-                options(editor = 'gvim -f -c "set ft=r"')
-       else
-                  options(editor = 'vim -c "set ft=r"')
-         # Load the colorout library:
-        library(colorout)
-       if(Sys.getenv("TERM") != "linux" && Sys.getenv("TERM") != ""){
-                  # Choose the colors for R output among 256 options.
-             # You should run show256Colors() and help(setOutputColors256) to
-                # know how to change the colors according to your taste:
-           setOutputColors256(verbose = FALSE)
-          }
-         # Load the setwidth library:
-        library(setwidth)
-       # Load the vimcom library only if R was started by Vim:
-              if(Sys.getenv("VIMRPLUGIN_TMPDIR") != ""){
-                 library(vimcom)
-            # See R documentation on Vim buffer even if asking for help in R Console:
-               if(Sys.getenv("VIM_PANE") != "")
-                      options(help_type = "text", pager = vim.pager)
-		}
+# Credit for this goes largely to:
+# http://gettinggeneticsdone.blogspot.com/2013/06/customize-rprofile.html
+# http://www.r-bloggers.com/fun-with-rprofile-and-customizing-r-startup/
+
+## Load packages
+library(BiocInstaller)
+
+## Don't show those silly significanct stars
+options(show.signif.stars=FALSE)
+
+# Print max 100 lines
+options(max.print=100)
+
+# Promt stuff
+options(prompt="> ")
+options(continue="... ")
+
+## Don't ask me for my CRAN mirror every time
+options("repos" = c(CRAN = "http://cran.rstudio.com/"))
+
+## Create a new invisible environment for all the functions to go in so it doesn't clutter your workspace.
+.env <- new.env()
+
+## Returns a logical vector TRUE for elements of X not in Y
+.env$"%nin%" <- function(x, y) !(x %in% y) 
+
+## Returns names(df) in single column, numbered matrix format.
+.env$n <- function(df) matrix(names(df)) 
+
+## Single character shortcuts for summary() and head().
+.env$s <- base::summary
+.env$h <- utils::head
+
+## ht==headtail, i.e., show the first and last 10 items of an object
+.env$ht <- function(d) rbind(head(d,10),tail(d,10))
+
+## Show the first 5 rows and first 5 columns of a data frame or matrix
+.env$hh <- function(d) if(class(d)=="matrix"|class(d)=="data.frame") d[1:5,1:5]
+
+## Read data on clipboard.
+.env$read.cb <- function(...) {
+  ismac <- Sys.info()[1]=="Darwin"
+  if (!ismac) read.table(file="clipboard", ...)
+  else read.table(pipe("pbpaste"), ...)
 }
+
+## Strip row names from a data frame (stolen from plyr)
+.env$unrowname <- function(x) {
+    rownames(x) <- NULL
+    x
+}
+
+## List objects and classes (from @_inundata, mod by ateucher)
+.env$lsa <- function() {
+{
+    obj_type <- function(x) class(get(x, envir = .GlobalEnv)) # define environment
+    foo = data.frame(sapply(ls(envir = .GlobalEnv), obj_type))
+    foo$object_name = rownames(foo)
+    names(foo)[1] = "class"
+    names(foo)[2] = "object"
+    return(unrowname(foo))
+}
+
+## List all functions in a package (also from @_inundata)
+.env$lsp <-function(package, all.names = FALSE, pattern) {
+    package <- deparse(substitute(package))
+    ls(
+        pos = paste("package", package, sep = ":"),
+        all.names = all.names,
+        pattern = pattern
+    )
+}
+
+# Suppress annoying startup messages for loading packages
+sshhh <- function(a.package){
+  suppressWarnings(suppressPackageStartupMessages(
+    library(a.package, character.only=TRUE)))
+}
+
+## Open Finder to the current directory on mac
+.env$macopen <- function(...) if(Sys.info()[1]=="Darwin") system("open .")
+.env$o       <- function(...) if(Sys.info()[1]=="Darwin") system("open .")
+
+## Attach all the variables above
+attach(.env)
+
+## .First() run at the start of every R session. 
+## Use to load commonly used packages? 
+.First <- function() {
+	# library(ggplot2)
+	cat("\nSuccessfully loaded .Rprofile at", date(), "\n")
+}
+
+## .Last() run at the end of the session
+.Last <- function() {
+	# save command history here?
+	cat("\nGoodbye at ", date(), "\n")
+}
+
+# Auto load packages
+auto.loads <-c("readr", "tidyr", "dplyr", "cowplot")

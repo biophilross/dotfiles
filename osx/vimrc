@@ -12,13 +12,13 @@ set ruler                     " show row and column numbers
 set autochdir                 " always switch to current directory
 set backupdir=~/.vim/backup   " set up backup directory
 set directory=~/.vim/tmp      " temporary storage directory
-" set background=dark           " assume a dark background
+set background=dark           " assume a dark background
 set history=500               " sore a lot of history
 set hidden                    " allow buffer switching without savinset nocompatible
 set mousehide                 " automatically hide mouse cursor while typing
 set encoding=utf-8            " character encoding
 set showcmd                   " display incomplete commands
-" set number                    " line numbers on
+set number                    " line numbers on
 set showmode                  " display current mode
 set cursorline                " highlight current line
 highlight clear SignColumn    " Sign Column should match the background of things

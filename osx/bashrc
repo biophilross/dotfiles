@@ -29,6 +29,9 @@ export PS1="${CYAN}\u@\h${RESTORE}:${LPURPLE}\w${RESTORE}\n\$ "
 
 ## Aliases
 
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
 # remote access
 alias lab='ssh -X philross@10.102.54.11'
 alias biostar='ssh -X pzr3@biostar.psu.edu'
@@ -73,8 +76,4 @@ calc () { python -c "from math import *; print $1"; }
 
 function echoerr() {
   echo "$@" 1>&2;
-}
-
-docker-ip() {
-	boot2docker ip 2> /dev/null
 }

@@ -33,7 +33,7 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # remote access
-alias lab='ssh -X philross@10.102.54.11'
+alias lab='ssh -X llinaslab@10.102.54.11'
 alias biostar='ssh -X pzr3@biostar.psu.edu'
 alias lionxv='ssh -X pzr3@lionxv.rcc.psu.edu'
 alias hammer='ssh -X pzr3@hammer.rcc.psu.edu'

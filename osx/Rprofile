@@ -98,4 +98,4 @@ attach(.env)
 }
 
 # Auto load packages
-auto.loads <-c("readr", "tidyr", "dplyr", "cowplot")
+auto.loads <- c("readr", "tidyr", "dplyr", "cowplot")

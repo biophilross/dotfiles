@@ -33,7 +33,7 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # remote access
-alias lab='ssh -X llinaslab@10.102.54.11'
+alias lab='ssh llinaslab@10.102.54.11'
 alias biostar='ssh -X pzr3@biostar.psu.edu'
 alias lionxv='ssh -X pzr3@lionxv.rcc.psu.edu'
 alias hammer='ssh -X pzr3@hammer.rcc.psu.edu'
@@ -69,11 +69,14 @@ alias date='date +%F'
 alias tmux="TERM=screen-256color-bce tmux"
 
 # Commands run when I open a new terminal session
-date
-echo 'Welcome, Phil!'
+# archey
 
 calc () { python -c "from math import *; print $1"; }
 
 function echoerr() {
   echo "$@" 1>&2;
 }
+
+# jekyll
+#jekyll () { docker run --rm -it -v "$(pwd):/src" -p 4000:4000 thephilross/satrn jekyll $@; }
+#serve-jekyll () { docker run --rm -it -v "$(pwd):/src" -p 4000:4000 thephilross/satrn jekyll serve --watch --config "/src/_config_dev.yml"; }

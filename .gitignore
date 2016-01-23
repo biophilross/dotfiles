@@ -1,1 +1,4 @@
 *.DS_Store
+osx/vim/un
+osx/vim/tmp
+osx/vim/.netrwhist

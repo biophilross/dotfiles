@@ -24,6 +24,24 @@ options("repos" = c(CRAN = "https://cran.rstudio.com/"))
 ## Returns a logical vector TRUE for elements of X not in Y
 .env$"%nin%" <- function(x, y) !(x %in% y) 
 
+## paste two strings together
+.env$`%+%` <- function(a, b) paste0(a, b)
+
+## in case a function evaluates to null, use this to provide default value
+.env$`%||%` <- function(a, b) if (!is.null(a)) a else b
+
+##
+.env$tdf <- function(df) {
+  # first remember the names
+  n <- df[,1]
+  
+  # transpose all but the first column (name)
+  df <- as.data.frame(t(df[,-1]))
+  colnames(df) <- n
+  #df$myfactor <- factor(row.names())
+  return(df)
+}
+
 ## Returns names(df) in single column, numbered matrix format.
 .env$n <- function(df) matrix(names(df)) 
 
@@ -87,7 +105,6 @@ attach(.env)
 ## .First() run at the start of every R session. 
 ## Use to load commonly used packages? 
 .First <- function() {
-	# library(ggplot2)
 	cat("\nSuccessfully loaded .Rprofile at", date(), "\n")
 }
 

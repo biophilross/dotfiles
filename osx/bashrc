@@ -61,9 +61,9 @@ alias tmuxconf='vim ~/.tmux.conf'
 alias b='cd -'
 alias h='cd ~'
 alias s='cd /'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias date='date +%F'
+#alias ..='cd ..'
+#alias ...='cd ../..'
+#alias date='date +%F'
 
 # tmux stuff
 alias tmux="TERM=screen-256color-bce tmux"
@@ -92,7 +92,7 @@ function mycd()
     echo "#"`date '+%s'` >> $HISTFILE
     echo $USER' has exited '$PWD' for '$@ >> $HISTFILE
     builtin cd "$@" # do actual cd
-    if [ -w $PWD ]; then export HISTFILE="$PWD/.dir_bash_history"; touch $HISTFILE; chmod --silent 777 $HISTFILE;
+    if [ -w $PWD ]; then export HISTFILE="$PWD/.dir_bash_history"; touch $HISTFILE; chmod -f 777 $HISTFILE;
     else export HISTFILE="$HOME/.bash_history";
     fi
     echo "#"`date '+%s'` >> $HISTFILE

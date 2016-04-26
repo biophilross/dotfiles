@@ -1,0 +1,14 @@
+##############################################################################
+#                                                                             #
+#  Phil Ross' personal .bash_functions                                        #
+#  <philippross369@gmail.com>                                                 #
+#                                                                             #
+###############################################################################
+
+# simple math function in python
+calc () { python -c "from math import *; print $1"; }
+
+# echo specifically to stderr
+function echoerr() {
+  echo "$@" 1>&2;
+}

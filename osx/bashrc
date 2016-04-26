@@ -1,6 +1,13 @@
+###############################################################################
+#                                                                             #
+#  Phil Ross' personal .bashrc                                                #
+#  <philippross369@gmail.com>                                                 #
+#                                                                             #
+###############################################################################
+
 # Load .bashrc if it exists
-test -f /etc/bashrc && source /etc/bashrc  
- 
+test -f /etc/bashrc && source /etc/bashrc
+
 # Terminal Prompt Customization
 export CLICOLOR=1
 #export LSCOLORS=ExFxBxDxCxegedabagacad
@@ -27,90 +34,25 @@ WHITE='\033[01;37m'
 # set prompt
 export PS1="${CYAN}\u@\h${RESTORE}:${LPURPLE}\w${RESTORE}\n\$ "
 
-## Aliases
-
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-
-# remote access
-alias lab='ssh llinaslab@10.102.54.11'
-alias biostar='ssh -X pzr3@biostar.psu.edu'
-alias lionxv='ssh -X pzr3@lionxv.rcc.psu.edu'
-alias hammer='ssh -X pzr3@hammer.rcc.psu.edu'
-
-# open sftp connection
-alias getfiles='sftp pzr3@biostar.psu.edu'
-
-# Commands the way I want them
-alias ll='ls -lh'
-alias awk="awk -F '\t' -v OFS='\t'"
-# alias bioawk="bioawk -F '\t' -v OFS='\t'"
-
-# Interactive file commands
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-
-# Profile editing shortcuts
-alias bashprof='vim ~/.bash_profile'
-alias bashrc='vim ~/.bashrc'
-alias vimrc='vim ~/.vimrc'
-alias tmuxconf='vim ~/.tmux.conf'
-
-# File navigation shortcuts
-alias b='cd -'
-alias h='cd ~'
-alias s='cd /'
-#alias ..='cd ..'
-#alias ...='cd ../..'
-#alias date='date +%F'
-
-# tmux stuff
-alias tmux="TERM=screen-256color-bce tmux"
-
 # Commands run when I open a new terminal session
-# archey
+archey
 
-calc () { python -c "from math import *; print $1"; }
+# Add bash aliases
+if [ -f ~/.bash_aliases ]; then
+  source ~/.bash_aliases
+fi
 
-function echoerr() {
-  echo "$@" 1>&2;
-}
+# Add bash functions
+if [ -f ~/.bash_functions ]; then
+  source ~/.bash_functions
+fi
 
-# jekyll
-#jekyll () { docker run --rm -it -v "$(pwd):/src" -p 4000:4000 thephilross/satrn jekyll $@; }
-#serve-jekyll () { docker run --rm -it -v "$(pwd):/src" -p 4000:4000 thephilross/satrn jekyll serve --watch --config "/src/_config_dev.yml"; }
+# Add bioinformatics specific bash functionality
+if [ -f ~/.bash_bioinformatics ]; then
+  source ~/.bash_bioinformatics
+fi
 
-## Directory Based Bash Histories ---------------------------------------------
-# All credit goes to https://gist.github.com/leipzig/1651133
-
-function mycd()
-{
-    #if this directory is writable then write to directory-based history file
-    #otherwise write history in the usual home-based history file                    
-    tmpDir=$PWD
-    echo "#"`date '+%s'` >> $HISTFILE
-    echo $USER' has exited '$PWD' for '$@ >> $HISTFILE
-    builtin cd "$@" # do actual cd
-    if [ -w $PWD ]; then export HISTFILE="$PWD/.dir_bash_history"; touch $HISTFILE; chmod -f 777 $HISTFILE;
-    else export HISTFILE="$HOME/.bash_history";
-    fi
-    echo "#"`date '+%s'` >> $HISTFILE
-    echo $USER' has entered '$PWD' from '$OLDPWD >> $HISTFILE
-
-}
-alias cd="mycd"
-#initial shell opened                                                                                     
-export HISTFILE="$PWD/.dir_bash_history"
-#timestamp all history entries                                                                            
-export HISTTIMEFORMAT="%h/%d - %H:%M:%S "
-export HISTCONTROL=ignoredups:erasedups
-export HISTSIZE=1000000
-export HISTFILESIZE=1000000
-shopt -s histappend ## append, no clearouts                                                               
-shopt -s histverify ## edit a recalled history line before executing                                      
-shopt -s histreedit ## reedit a history substitution line if it failed                                    
-
-## Save the history after each command finishes                                                           
-## (and keep any existing PROMPT_COMMAND settings)                                                        
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+# Add bash modules
+if [ -f ~/.bash_history_module ]; then
+  source ~/.bash_history_module
+fi

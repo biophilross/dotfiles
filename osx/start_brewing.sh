@@ -31,6 +31,8 @@ brew cask install spotify
 brew install vim
 brew install archey
 brew install r
+brew install python
+brew install ruby
 brew install pandoc
 brew install tmux
 brew install sshfs

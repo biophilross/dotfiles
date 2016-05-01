@@ -47,3 +47,4 @@ brew install dos2unix
 brew install coreutils
 brew install parallel
 brew install littler
+brew install awscli

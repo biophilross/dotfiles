@@ -11,6 +11,7 @@ brew cask install suspicious-package
 
 # Apps
 brew cask install alfred
+brew cask install asepsis # To prevent having to create .DS_Store files
 brew cask install caffeine
 brew cask install cheatsheet
 brew cask install dropbox

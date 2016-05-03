@@ -11,6 +11,7 @@ brew cask install suspicious-package
 
 # Apps
 brew cask install alfred
+brew cask install asepsis # To prevent having to create .DS_Store files
 brew cask install caffeine
 brew cask install cheatsheet
 brew cask install dropbox
@@ -31,6 +32,8 @@ brew cask install spotify
 brew install vim
 brew install archey
 brew install r
+brew install python
+brew install ruby
 brew install pandoc
 brew install tmux
 brew install sshfs
@@ -45,3 +48,4 @@ brew install dos2unix
 brew install coreutils
 brew install parallel
 brew install littler
+brew install awscli

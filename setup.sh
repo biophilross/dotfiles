@@ -35,8 +35,10 @@ for file in $files; do
     ln -sf "$HOME/.dotfiles/$system/$file" "$HOME/.$file"
 done
 
-mkdir "$HOME/.vim/un"
-mkdir "$HOME/.vim/tmp"
-mkdir "$HOME/.vim/backup"
+mkdir -p "$HOME/.vim/un"
+mkdir -p "$HOME/.vim/tmp"
+mkdir -p "$HOME/.vim/backup"
+mkdir -p "$HOME/.local/src"
+mkdir -p "$HOME/.local/bin"
 
 exit

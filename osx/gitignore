@@ -20,3 +20,6 @@ Thumbs.db
 venv
 node_modules
 .sass-cache
+
+# Directory based bash history
+.dir_bash_history

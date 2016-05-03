@@ -3,7 +3,7 @@
 # http://www.r-bloggers.com/fun-with-rprofile-and-customizing-r-startup/
 
 ## Load packages
-library(BiocInstaller)
+#library(BiocInstaller)
 
 ## Don't show those silly significanct stars
 options(show.signif.stars=FALSE)
@@ -22,7 +22,7 @@ options("repos" = c(CRAN = "https://cran.rstudio.com/"))
 .env <- new.env()
 
 ## Returns a logical vector TRUE for elements of X not in Y
-.env$"%nin%" <- function(x, y) !(x %in% y) 
+.env$"%nin%" <- function(x, y) !(x %in% y)
 
 ## paste two strings together
 .env$`%+%` <- function(a, b) paste0(a, b)
@@ -34,7 +34,7 @@ options("repos" = c(CRAN = "https://cran.rstudio.com/"))
 .env$tdf <- function(df) {
   # first remember the names
   n <- df[,1]
-  
+
   # transpose all but the first column (name)
   df <- as.data.frame(t(df[,-1]))
   colnames(df) <- n
@@ -43,7 +43,7 @@ options("repos" = c(CRAN = "https://cran.rstudio.com/"))
 }
 
 ## Returns names(df) in single column, numbered matrix format.
-.env$n <- function(df) matrix(names(df)) 
+.env$n <- function(df) matrix(names(df))
 
 ## Single character shortcuts for summary() and head().
 .env$s <- base::summary
@@ -69,7 +69,7 @@ options("repos" = c(CRAN = "https://cran.rstudio.com/"))
 }
 
 ## List objects and classes (from @_inundata, mod by ateucher)
-.env$lsa <- function() {
+.env$lsa <- function()
 {
     obj_type <- function(x) class(get(x, envir = .GlobalEnv)) # define environment
     foo = data.frame(sapply(ls(envir = .GlobalEnv), obj_type))
@@ -102,17 +102,17 @@ sshhh <- function(a.package){
 ## Attach all the variables above
 attach(.env)
 
-## .First() run at the start of every R session. 
-## Use to load commonly used packages? 
-.First <- function() {
-	cat("\nSuccessfully loaded .Rprofile at", date(), "\n")
-}
+## .First() run at the start of every R session.
+## Use to load commonly used packages?
+#.First <- function() {
+#	cat("\nSuccessfully loaded .Rprofile at", date(), "\n")
+#}
 
 ## .Last() run at the end of the session
-.Last <- function() {
-	# save command history here?
-	cat("\nGoodbye at ", date(), "\n")
-}
+#.Last <- function() {
+#	# save command history here?
+#	cat("\nGoodbye at ", date(), "\n")
+#}
 
 # Auto load packages
 auto.loads <- c("readr", "tidyr", "dplyr", "cowplot")

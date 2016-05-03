@@ -32,27 +32,27 @@ LCYAN='\033[01;36m'
 WHITE='\033[01;37m'
 
 # set prompt
-export PS1="${CYAN}\u@\h${RESTORE}:${LPURPLE}\w${RESTORE}\n\$ "
+export PS1="${GREEN}\u@\h${RESTORE}:${LCYAN}\w${RESTORE}\n\$ "
 
 # Commands run when I open a new terminal session
 archey
 
 # Add bash aliases
-if [ -f ~/.bash_aliases ]; then
+if [ -f $HOME/.bash_aliases ]; then
   source ~/.bash_aliases
 fi
 
 # Add bash functions
-if [ -f ~/.bash_functions ]; then
+if [ -f $HOME/.bash_functions ]; then
   source ~/.bash_functions
 fi
 
 # Add bioinformatics specific bash functionality
-if [ -f ~/.bash_bioinformatics ]; then
+if [ -f $HOME/.bash_bioinformatics ]; then
   source ~/.bash_bioinformatics
 fi
 
 # Add bash modules
-if [ -f ~/.bash_history_module ]; then
-  source ~/.bash_history_module
+if [ -f $HOME/.bash_dir_history_module ]; then
+  source ~/.bash_dir_history_module
 fi

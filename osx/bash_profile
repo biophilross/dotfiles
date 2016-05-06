@@ -13,3 +13,5 @@ export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 #export DOCKER_CERT_PATH="/Users/philross/.docker/machine/machines/default"
 #export DOCKER_MACHINE_NAME="default"
 
+# added by Miniconda2 4.0.5 installer
+export PATH="/Users/philippross/miniconda2/bin:$PATH"

@@ -49,3 +49,4 @@ brew install coreutils
 brew install parallel
 brew install littler
 brew install awscli
+brew install zeromq # for jupyter IRkernel

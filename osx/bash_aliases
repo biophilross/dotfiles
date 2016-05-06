@@ -43,4 +43,7 @@ alias tmuxconf='vim ~/.tmux.conf'
 #alias date='date +%F'
 
 # tmux stuff
-alias tmux="TERM=screen-256color-bce tmux"
+alias tmux='TERM=screen-256color-bce tmux'
+
+# encrypting and fingerprint files
+alias shasum='shasum -a 256'

@@ -23,3 +23,8 @@ node_modules
 
 # Directory based bash history
 .dir_bash_history
+
+# R files
+.RData
+.Rhistory
+.Rproj.user

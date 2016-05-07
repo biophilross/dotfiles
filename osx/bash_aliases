@@ -47,3 +47,6 @@ alias tmux='TERM=screen-256color-bce tmux'
 
 # encrypting and fingerprint files
 alias shasum='shasum -a 256'
+
+# R shortcuts
+alias rsummary="Rscript -e 'summary(read.table(\"stdin\"))'"

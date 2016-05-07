@@ -56,6 +56,6 @@ if [ -f $HOME/.bash_bioinformatics ]; then
 fi
 
 # Add bash modules
-if [ -f $HOME/.bash_dir_history_module ]; then
-  source ~/.bash_dir_history_module
-fi
+#if [ -f $HOME/.bash_dir_history_module ]; then
+#  source ~/.bash_dir_history_module
+#fi

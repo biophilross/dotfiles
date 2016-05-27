@@ -19,6 +19,7 @@ alias hammer='ssh -X pzr3@hammer.rcc.psu.edu'
 alias getfiles='sftp pzr3@biostar.psu.edu'
 
 # Commands the way I want them
+alias ls='/usr/local/bin/gls --color -h --group-directories-first'
 alias ll='ls -lh'
 alias awk="awk -F '\t' -v OFS='\t'"
 alias bioawk="bioawk -F '\t' -v OFS='\t'"
@@ -46,7 +47,8 @@ alias tmuxconf='vim ~/.tmux.conf'
 alias tmux='TERM=screen-256color-bce tmux'
 
 # encrypting and fingerprint files
-alias shasum='shasum -a 256'
+#alias shasum='shasum -a 256'
 
 # R shortcuts
+alias R='R --no-save -q'
 alias rsummary="Rscript -e 'summary(read.table(\"stdin\"))'"

@@ -34,7 +34,6 @@ options("repos" = c(CRAN = "https://cran.rstudio.com/"))
 .env$tdf <- function(df) {
   # first remember the names
   n <- df[,1]
-
   # transpose all but the first column (name)
   df <- as.data.frame(t(df[,-1]))
   colnames(df) <- n
@@ -118,4 +117,4 @@ if (Sys.getenv("TERM") == "xterm-256color") library("colorout")
 #}
 
 # Auto load packages
-auto.loads <- c("readr", "tidyr", "dplyr", "cowplot")
+#auto.loads <- c("readr", "tidyr", "dplyr", "cowplot")

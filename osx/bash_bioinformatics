@@ -5,3 +5,9 @@
 #                                                                             #
 ###############################################################################
 
+
+## Aliases --------------------------------------------------------------------
+
+# Convert a SAM file to BAM format, after sorting it
+# Tested on samtools version 1.2
+alias sam2bam='samtools view -bh - | samtools sort -O "bam" -T XXX -'

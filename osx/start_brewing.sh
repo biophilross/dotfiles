@@ -1,3 +1,8 @@
+# Tap the things
+brew tap caskroom/cask
+brew tap homebrew/science
+brew tap caskroom/fonts 
+
 # Quick look plugins
 brew cask install qlcolorcode
 brew cask install qlstephen
@@ -11,7 +16,7 @@ brew cask install suspicious-package
 
 # Apps
 brew cask install alfred
-#brew cask install asepsis # To prevent having to create .DS_Store files - doesn't work on newest OSX
+#brew cask install asepsis # To prevent having to create .DS_Store files - doesn't work on el capitan
 brew cask install caffeine
 brew cask install cheatsheet
 brew cask install dropbox
@@ -28,8 +33,10 @@ brew cask install osxfuse
 brew cask install java
 brew cask install spotify
 brew cask install macdown # markdown editor of choice
+brew cask install font-fira-code # cool font
 
 # Command line
+brew install neovim/neovim/neovim
 brew install vim
 brew install archey
 brew install r
@@ -51,3 +58,4 @@ brew install parallel
 brew install littler
 brew install awscli
 brew install zeromq # for jupyter IRkernel
+brew install dropbox-uploader # for dropbox uploading and downloading

@@ -32,7 +32,7 @@ LCYAN='\033[01;36m'
 WHITE='\033[01;37m'
 
 # set prompt
-export PS1="${GREEN}\u@\h${RESTORE}:${LCYAN}\w${RESTORE}\n\$ "
+export PS1="${LGREEN}\u@\h${RESTORE}:${LCYAN}\w${RESTORE}\n\$ "
 
 # complete awscli commands
 complete -C aws_completer aws

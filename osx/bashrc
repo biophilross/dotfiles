@@ -1,7 +1,7 @@
 ###############################################################################
 #                                                                             #
-#  Phil Ross' personal .bashrc                                                #
-#  <philippross369@gmail.com>                                                 #
+#  Philipp Ross' personal .bashrc                                                #
+#  <philippzross@gmail.com>                                                   #
 #                                                                             #
 ###############################################################################
 
@@ -32,13 +32,13 @@ LCYAN='\033[01;36m'
 WHITE='\033[01;37m'
 
 # set prompt
-export PS1="${LGREEN}\u@\h${RESTORE}:${LCYAN}\w${RESTORE}\n\$ "
+export PS1="${LGREEN}\u${RESTORE}:${LCYAN}\w${RESTORE}\n\$ "
 
 # complete awscli commands
-complete -C aws_completer aws
+#complete -C aws_completer aws
 
 # Commands run when I open a new terminal session
-archey
+#archey
 
 # Add bash aliases
 if [ -f $HOME/.bash_aliases ]; then

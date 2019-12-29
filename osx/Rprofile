@@ -102,7 +102,7 @@ sshhh <- function(a.package){
 attach(.env)
 
 ## Change colors when running R in the terminal
-if (Sys.getenv("TERM") == "xterm-256color") library("colorout")
+#if (Sys.getenv("TERM") == "xterm-256color") library("colorout")
 
 ## .First() run at the start of every R session.
 ## Use to load commonly used packages?

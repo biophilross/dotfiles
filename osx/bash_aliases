@@ -1,7 +1,7 @@
 ###############################################################################
 #                                                                             #
-#  Phil Ross' personal .bash_aliases                                          #
-#  <philippross369@gmail.com>                                                 #
+#  Philipp Ross' personal .bash_aliases                                       #
+#  <philippzross@gmail.com>                                                   #
 #                                                                             #
 ###############################################################################
 
@@ -10,13 +10,8 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # remote access
-alias lab='ssh llinaslab@10.102.54.11'
-alias biostar='ssh -X pzr3@biostar.psu.edu'
-alias lionxv='ssh -X pzr3@lionxv.rcc.psu.edu'
-alias hammer='ssh -X pzr3@hammer.rcc.psu.edu'
-
-# open sftp connection
-alias getfiles='sftp pzr3@biostar.psu.edu'
+alias erin='erin@128.135.176.88'
+alias mini='philippross@nsit-dhcp-148-096.bsd.uchicago.edu'
 
 # Commands the way I want them
 alias ls='/usr/local/bin/gls --color -h --group-directories-first'

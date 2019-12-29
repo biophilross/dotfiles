@@ -7,28 +7,3 @@ test -f $HOME/.bashrc && source $HOME/.bashrc
 # Ensure user-installed binaries take precedence   
 export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"  
 
-# UPDATE THIS
-#export DOCKER_TLS_VERIFY="1"
-#export DOCKER_HOST="tcp://192.168.99.100:2376"
-#export DOCKER_CERT_PATH="/Users/philross/.docker/machine/machines/default"
-#export DOCKER_MACHINE_NAME="default"
-
-# added by Miniconda2 4.0.5 installer
-export PATH="/Users/philippross/miniconda2/bin:$PATH"
-# added by Anaconda3 2019.03 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda init <<<
-export PATH="/usr/local/opt/libxml2/bin:$PATH"

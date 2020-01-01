@@ -24,14 +24,14 @@ brew cask install rstudio
 brew cask install java
 brew cask install spotify
 brew cask install font-fira-code # cool font
+brew cask install typora # markdown editing
 
 # Command line
 brew install vim
-brew install archey
 brew install r
-brew install python
+# brew install python # install with anaconda
 brew install ruby
-brew install pandoc
+brew install pandoc pandoc-citeproc
 brew install tmux
 brew install sshfs
 brew install tree

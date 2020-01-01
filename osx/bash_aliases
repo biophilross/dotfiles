@@ -10,8 +10,8 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 # remote access
-alias erin='erin@128.135.176.88'
-alias mini='philippross@nsit-dhcp-148-096.bsd.uchicago.edu'
+alias erin='ssh erin@128.135.176.88'
+alias mini='ssh philippross@nsit-dhcp-148-071.bsd.uchicago.edu'
 
 # Commands the way I want them
 alias ls='/usr/local/bin/gls --color -h --group-directories-first'

@@ -5,5 +5,5 @@ test -f $HOME/.bashrc && source $HOME/.bashrc
 # export ARCHFLAGS="-arch x86_64"
 
 # Ensure user-installed binaries take precedence   
-export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"  
+export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texlive/2016/bin/x86_64-darwin"  
 

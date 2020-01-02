@@ -31,7 +31,7 @@ brew install vim
 brew install r
 # brew install python # install with anaconda
 brew install ruby
-brew install pandoc pandoc-citeproc
+brew install pandoc pandoc-citeproc pandoc-crossref
 brew install tmux
 brew install sshfs
 brew install tree

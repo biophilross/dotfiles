@@ -1,0 +1,6 @@
+.DS_Store
+*~
+.ruby-version
+Core.bib
+Core.json
+pandoclog.json

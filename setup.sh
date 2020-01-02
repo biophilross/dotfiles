@@ -40,5 +40,6 @@ mkdir -p "$HOME/.vim/tmp"
 mkdir -p "$HOME/.vim/backup"
 mkdir -p "$HOME/.local/src"
 mkdir -p "$HOME/.local/bin"
+mkdir -p "$HOME/.local/share/pandoc"
 
 exit
